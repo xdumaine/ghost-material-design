@@ -3,23 +3,23 @@
 <main class="mdl-layout__content" role="main">
 	<div class="ghost-blog__posts mdl-grid">
 		{{#foreach posts}}
-		<article class="mdl-card mdl-cell mdl-cell--12-col {{post_class}}">
-			<div class="mdl-card__media mdl-color-text--grey-50" {{#if image}}style="background-image: url({{image}})"{{/if}}>
-				<h3><a href="{{url}}">{{{title}}}</a></h3>
-			</div>
-			<div class="mdl-card__supporting-text mdl-color-text--grey-600">
-				{{excerpt}}&hellip;
-			</div>
-			<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-				<div class="minilogo"></div>
-				<div>
-					<strong>{{author}} {{#if tags}}on {{tags}}{{/if}}</strong>
-					<span><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+			<article class="mdl-card mdl-cell mdl-cell--12-col {{post_class}}">
+				<div class="mdl-card__media mdl-color-text--grey-50" {{#if image}}style="background-image: url({{image}})"{{/if}}>
+					<h3><a href="{{url}}">{{{title}}}</a></h3>
 				</div>
-			</div>
-		</article>
-
+				<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+					{{excerpt}}&hellip;
+				</div>
+				<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+					<div class="minilogo"></div>
+					<div>
+						<strong>{{author}} {{#if tags}}on {{tags}}{{/if}}</strong>
+						<span><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+					</div>
+				</div>
+			</article>
 		{{/foreach}}
+		{{pagination}}
 	</div>
 	<script>
 	    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
@@ -36,6 +36,14 @@
 	      });
 	    });
 	  </script>
-{{pagination}}
-
+	<footer class="mdl-mini-footer">
+		<div class="mdl-mini-footer--left-section">
+			<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button>
+			<button class="mdl-mini-footer--social-btn social-btn social-btn__blogger"></button>
+			<button class="mdl-mini-footer--social-btn social-btn social-btn__gplus"></button>
+		</div>
+		<div class="mdl-mini-footer--right-section">
+			<button class="mdl-mini-footer--social-btn social-btn__share"><i class="material-icons">share</i></button>
+		</div>
+	</footer>
 </main>
