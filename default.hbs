@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {{! Styles'n'Scripts }}
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{asset "lib/material.min.css"}}" />
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}"/>
     <script src="{{asset "lib/material.min.js"}}"></script>
@@ -26,7 +28,7 @@
     style="background-image: url({{@blog.cover}})"
 {{/if}}
 >
-    <div class="ghost-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+    <div class="ghost-blog mdl-layout mdl-js-layout has-drawer is-upgraded {{#is "post"}}ghost-blog--blogpost{{/is}}">
 
         {{! Everything else gets inserted here }}
         {{{body}}}

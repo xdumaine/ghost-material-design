@@ -114,46 +114,6 @@ body .ghost-blog {
   display: flex;
   flex-direction: column;
 }
-.ghost-blog.is-small-screen .ghost-blog__posts > .mdl-card.coffee-pic {
-  order: 0;
-}
-.ghost-blog.is-small-screen .ghost-blog__posts > .mdl-card.something-else {
-  order: -1;
-}
-.ghost-blog .something-else .mdl-card__media {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.ghost-blog .something-else > button {
-  position: absolute;
-  top: 0;
-  right: 28px;
-  transform: translate(0px, -28px);
-}
-.ghost-blog .something-else .mdl-card__media {
-  font-size: 13px;
-  font-weight: 500;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-}
-.ghost-blog .something-else .mdl-card__media img {
-  width: 64px;
-  height: 64px;
-  margin-bottom: 10px;
-}
-.ghost-blog .something-else .mdl-card__supporting-text {
-  background-color: #F5F5F5;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-.ghost-blog .on-the-road-again .mdl-card__media {
-  background-image: url('images/road.jpg');
-}
-.ghost-blog .shopping .mdl-card__media {
-  background-image: url('images/shopping.jpg');
-}
 .ghost-blog .ghost-blog__posts > .demo-nav {
   margin: 12px 15px;
   display: flex;
@@ -198,6 +158,9 @@ body .ghost-blog {
 }
 .ghost-blog .mdl-card h3.quote:after {
   content: '”';
+}
+.ghost-blog .mdl-card img {
+    max-width: 100%;
 }
 .ghost-blog--blogpost .custom-header {
   background-color: transparent;
