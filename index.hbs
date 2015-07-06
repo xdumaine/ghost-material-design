@@ -21,21 +21,6 @@
 		{{/foreach}}
 		{{pagination}}
 	</div>
-	<script>
-	    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
-	      var link = el.querySelector('a');
-	      if(!link) {
-	        return;
-	      }
-	      var target = link.getAttribute('href');
-	      if(!target) {
-	        return;
-	      }
-	      el.addEventListener('click', function() {
-	        location.href = target;
-	      });
-	    });
-	  </script>
 	<footer class="mdl-mini-footer">
 		<div class="mdl-mini-footer--left-section">
 			<button class="mdl-mini-footer--social-btn social-btn social-btn__twitter"></button>

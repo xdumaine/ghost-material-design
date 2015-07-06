@@ -22,6 +22,17 @@ body .ghost-blog {
   font-family: 'Roboto', 'Helvetica', sans-serif;
 }
 
+
+/************* COLORS *************/
+.ghost-blog .ghost-blog__posts a {
+    color: #FFAB40;
+}
+
+.ghost-blog .mdl-card__media {
+    background-color: #FFAB40;
+}
+/************* /COLORS ***********/
+
 .ghost-blog .ghost-blog__posts {
   max-width: 900px;
   padding: 0;
@@ -282,7 +293,6 @@ body .ghost-blog {
 .ghost-blog .minilogo {
   width: 44px;
   height: 44px;
-  background-image: url('images/avatar.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 50%;
