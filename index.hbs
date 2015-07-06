@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! The big featured header on the homepage, with the site logo and description }}
+
+{{! The main content area on the homepage }}
+<main class="mdl-layout__content" role="main">
+
+	<div class="ghost-blog__posts mdl-grid">
+
+		{{! Each post will be output using this markup }}
+		{{#foreach posts}}
+		<article class="mdl-card mdl-cell mdl-cell--12-col {{post_class}}">
+			<div class="mdl-card__media mdl-color-text--grey-50" {{#if image}}style="background-image: url({{image}})"{{/if}}>
+				<h3><a href="{{url}}">{{{title}}}</a></h3>
+			</div>
+			<div class="mdl-card__supporting-text mdl-color-text--grey-600">
+				{{excerpt}}&hellip;
+			</div>
+			<div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+				<div class="minilogo"></div>
+				<div>
+					<strong>{{author}} {{#if tags}}on {{tags}}{{/if}}</strong>
+					<span><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time></span>
+				</div>
+			</div>
+		</article>
+
+		{{/foreach}}
+	</div>
+
+{{!! After all the posts, we have the previous/next pagination links }}
+{{pagination}}
+
+</main>

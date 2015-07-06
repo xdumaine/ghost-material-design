@@ -1,0 +1,48 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<main class="mdl-layout__content" role="main">
+    <div class="demo-back">
+      <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="index.html">
+        <i class="material-icons">arrow_back</i>
+      </a>
+    </div>
+    <article class="ghost-blog__posts mdl-grid {{post_class}}">
+        {{#post}}
+            <div class="mdl-card mdl-shadow-4dp mdl-cell mdl-cell--12-col">
+                <div class="mdl-card__media mdl-color-text--grey-50" {{#if image}}style="background-image: url({{image}})"{{/if}}>
+                  <h3 class="post-title">{{{title}}}</h3>
+                </div>
+                <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+                  <div class="minilogo"></div>
+                  <div>
+                    <strong>{{author}} {{#if tags}}on {{tags separator=" | "}}{{/if}}</strong>
+                    <span><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time></span>
+                  </div>
+                  <div class="section-spacer"></div>
+                  <div class="meta__favorites">425 <i class="material-icons">favorite</i></div>
+                  <div><i class="material-icons">bookmark</i></div>
+                  <div><i class="material-icons">share</i></div>
+                </div>
+                <div class="mdl-color-text--grey-700 mdl-card__supporting-text">
+                    {{content}}
+                </div>
+            </div>
+
+
+            <footer class="post-footer">
+                {{#if author}}
+                    <section class="author">
+                        <h4>{{author.name}}</h4>
+                        <p>{{author.bio}}</p>
+                    </section>
+                {{/if}}
+            </footer>
+
+        {{/post}}
+
+    </article>
+
+</main>
