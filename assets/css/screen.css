@@ -155,6 +155,7 @@ body .ghost-blog {
 }
 .ghost-blog .mdl-card h3 {
   margin: 0;
+  text-shadow: 2px 2px 2px #393939;
 }
 .ghost-blog .mdl-card h3 a {
   text-decoration: none;
