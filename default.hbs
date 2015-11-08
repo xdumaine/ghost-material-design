@@ -33,7 +33,7 @@
     style="background-image: url({{@blog.cover}})"
 {{/if}}
 >
-    <div class="ghost-blog mdl-layout mdl-js-layout has-drawer is-upgraded {{#is "post"}}ghost-blog--blogpost{{/is}}">
+    <div class="ghost-blog mdl-layout mdl-js-layout has-drawer is-upgraded {{#is "post, page"}}ghost-blog--blogpost{{/is}}">
 
         {{! Everything else gets inserted here }}
         {{{body}}}
