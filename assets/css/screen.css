@@ -104,6 +104,15 @@ body .ghost-blog {
   justify-content: flex-start;
   height: auto;
 }
+.ghost-blog .meta.heading {
+    display: block;
+}
+.ghost-blog .meta.heading * {
+    align-items: center;
+}
+.ghost-blog .meta.navigation {
+    justify-content: space-between;
+}
 .ghost-blog .meta > .meta__favorites{
   flex-direction: row;
   margin: 0 8px;
