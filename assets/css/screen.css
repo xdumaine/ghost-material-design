@@ -111,7 +111,7 @@ body .ghost-blog {
     align-items: center;
 }
 .ghost-blog .meta.navigation {
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .ghost-blog .meta > .meta__favorites{
   flex-direction: row;
