@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
   background-size: cover;
   background-attachment: fixed;
@@ -80,6 +84,9 @@ body .ghost-blog {
 }
 .ghost-blog .mdl-card__supporting-text strong {
   font-weight: 400;
+}
+.ghost-blog .mdl-card__supporting-text hr {
+  width: 100%;
 }
 .ghost-blog .mdl-card__media ~ .mdl-card__supporting-text {
   min-height: 64px;
@@ -202,11 +209,31 @@ body .ghost-blog {
   flex-direction: column;
 }
 .ghost-blog--blogpost .meta + .mdl-card__supporting-text p {
-  max-width: 512px;
+  width: 512px;
   margin: 16px auto;
   font-size: 16px;
   line-height: 28px;
 }
+
+/* blockquotes */
+.ghost-blog .mdl-card__supporting-text blockquote:before,
+.ghost-blog .mdl-card__supporting-text blockquote:after {
+  content: none;
+}
+
+.ghost-blog--blogpost .meta + .mdl-card__supporting-text blockquote p {
+  margin: 0;
+  padding-left: 50px;
+  border-left: solid 10px;
+}
+.ghost-blog--blogpost .meta + .mdl-card__supporting-text blockquote p:before {
+    /*content: '“';
+    font-size: 100px;
+    vertical-align: top;
+    font-family: serif;*/
+}
+
+/* /blockquotes */
 
 .ghost-blog--blogpost .comments {
   display: flex;
