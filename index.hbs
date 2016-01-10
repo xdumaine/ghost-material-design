@@ -23,8 +23,8 @@
 	</div>
 	<div class="ghost-blog__posts mdl-grid">
 		{{#foreach posts}}
-			<article class="mdl-card mdl-cell mdl-cell--12-col {{post_class}}">
-				<div class="mdl-card__media mdl-color-text--grey-50" {{#if image}}style="background-image: url({{image}})"{{else}}style="flex:0"{{/if}}>
+			<article class="mdl-card mdl-cell mdl-cell--12-col {{post_class}} {{#unless image}}no-image{{/unless}}">
+				<div class="mdl-card__media mdl-color-text--grey-50" {{#if image}}style="background-image: url({{image}})"{{/if}}>
 					<h3><a href="{{url}}">{{{title}}}</a></h3>
 				</div>
 				<div class="mdl-card__supporting-text mdl-color-text--grey-600">

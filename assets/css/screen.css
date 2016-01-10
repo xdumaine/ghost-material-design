@@ -194,6 +194,9 @@ body .ghost-blog {
 .ghost-blog .mdl-card img {
     max-width: 100%;
 }
+.ghost-blog .mdl-card.no-image {
+  min-height: inherit;
+}
 .ghost-blog--blogpost .custom-header {
   background-color: transparent;
 }
